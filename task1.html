@@ -1,0 +1,53 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task</title>
+</head>
+
+<body>
+    <h4>Qualifications:</h4>
+    <div>
+        <ol class="new_li">
+            
+        </ol>
+    </div>
+    <!-- <div>
+        <input type="text" id="input_field">
+        <input type="button" value="Click" onclick="print_value()">
+    </div>
+    <div>
+        <ul class="text">
+
+        </ul>
+    </div> -->
+
+    <script>
+        let arr = ["SSC", "HSC", "BCS", "BS", "BCOM", "MS", "M.Phil.", "PhD","IT"];
+        for (let i = 0; i < arr.length; i++) {
+            let element = document.createElement('li');
+            element.id = 'add_li';
+            let text =  arr[i] + '\n';
+            element.innerText = text;
+            // console.log(element);
+            let ol = document.querySelector('ol.new_li');
+            ol.appendChild(element);
+        
+            
+        }
+        // function print_value() {
+        //     let element2 = document.createElement('li');
+        //     element2.innerText = document.getElementById('input_field').value;
+        //     let ul = document.querySelector('ul.text');
+        //     ul.appendChild(element2);
+        // }
+
+        
+
+
+    </script>
+</body>
+
+</html>
