@@ -1,0 +1,102 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task3</title>
+</head>
+
+<body>
+    <input type="text" name="" id="inp">
+    <input type="button" value="Add in begining" onclick="Add_Start()">
+    <input type="button" value="Add to end" onclick="Add_End()">
+    <input type="button" value="Delete First Value" onclick="del_first()">
+    <input type="button" value="Add Color on Desired Position" onclick="Add_Desired_position()">
+    <input type="button" value="Delete" onclick="delete1()">
+    <div class="adding">
+        <h3 id="head"></h3>
+    </div>
+
+
+    <script>
+        let arr = ['orange', 'brown', 'purple']
+        // console.log(arr);
+
+        function Add_Start() {
+            let val = document.getElementById('inp').value;
+            arr.unshift(val);
+            
+            for (let i = 0; i < arr.length; i++) {
+                
+                let element = document.createElement('p');
+                element.innerText = arr[i];
+                let div = document.querySelector('div.adding');
+                div.appendChild(element);
+            }
+            
+        }
+        function Add_End() {
+            let val = document.getElementById('inp').value;
+            arr.push(val);
+            
+            for (let i = 0; i < arr.length; i++) {
+                
+                let element = document.createElement('p');
+                element.innerText = arr[i];
+                let div = document.querySelector('div.adding');
+                div.appendChild(element);
+            }
+            
+        }
+        function del_first() {
+            arr.shift();
+            if (arr == '') {
+                    alert('Add element in Array... Array is Empty')
+                }
+            for (let i = 0; i < arr.length; i++) {
+                document.getElementById('head').innerText = 'First Element in the Array was Deleted.'
+                let element = document.createElement('p');
+                element.innerText = arr[i];
+                let div = document.querySelector('div.adding');
+                div.appendChild(element);
+            }
+        }
+
+        // function Delete() {
+        //     let new_arr=arr.splice(0,1);
+        //     console.log(arr);
+        // }
+
+        function Add_Desired_position() {
+
+            let Position = prompt('Enter Position where you want to add Color');
+            let Color_name = prompt('Enter Color Name');
+            let val = arr.splice(Position,Position.value-1,Color_name);
+            for (let i = 0; i < arr.length; i++) {
+                
+                let element = document.createElement('p');
+                element.innerText = arr[i];
+                let div = document.querySelector('div.adding');
+                div.appendChild(element);
+            }
+        }
+        
+        function delete1() {
+            let val = prompt('Enter Index of Element Which You Want To Delete.')
+            let val2 = prompt('How Many Values You want To Delete.')
+            arr.splice(val,val2);
+            for (let i = 0; i < arr.length; i++) {
+                
+                let element = document.createElement('p');
+                element.innerText = arr[i];
+                let div = document.querySelector('div.adding');
+                div.appendChild(element);
+            }
+        }
+   
+   
+   </script>
+</body>
+
+</html>
