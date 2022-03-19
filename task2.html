@@ -1,0 +1,37 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task2</title>
+</head>
+
+<body>
+    <div>
+        <input type="text" name="" id="name_here" placeholder="Enter Name Here"><br><br>
+        <input type="text" name="" id="score_here" placeholder="Enter Score Here">
+        <input type="button" value="Click" onclick="clk_fun()">
+        <h4 id="name1"></h4>
+        <p id="info"></p>
+    </div>
+
+    <script>
+        function clk_fun() {
+            let name = [];
+            let score = [];
+
+                let std_name = document.getElementById('name_here').value;
+                let std_score = document.getElementById('score_here').value;
+                name.push(std_name);
+                score.push(std_score);
+                document.getElementById('info').innerText = `Score of ${name[i]} is ${score[i]}. Percentage: ${percent.toFixed(2)}`;
+                let percent = score[0] / 500 * 100;
+            
+            
+
+        }
+    </script>
+</body>
+
+</html>
