@@ -1,0 +1,51 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <select name="" class="option1">
+
+        </select>
+    </div>
+    
+
+    <script>
+        let arr = [3,'a','a','a',2,3,'a',3,'a',2,4,9,3];
+
+// 1st Method
+        // let unique = [...new Set(arr)];
+// 2nd Method        
+        // let unique = Array.from(new Set(arr));
+// 3rd Method         
+        // const unique = arr.filter((value,index)=>{
+            // return arr.indexOf(value) === index;
+            
+        // })
+// 4th Method 
+        function uniqueElements(array) {
+            const unique = [];
+            arr.forEach(value => {
+                if (!unique.includes(value)) {
+                    unique.push(value);
+                }
+            });
+            return unique;
+        }
+    unique = uniqueElements(arr);
+
+
+        for (let i = 0; i < unique.length; i++) {
+            let element = document.createElement('option');
+            element.innerText = unique[i];
+            let select = document.querySelector('select.option1');
+            select.appendChild(element);
+            
+        }
+        
+    </script>
+</body>
+</html>
