@@ -1,0 +1,71 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task7</title>
+</head>
+
+<body>
+    <input type="text" id="input_field">
+    <input type="button" value="Counting" onclick="count()">
+    <input type="button" value="Reverse" onclick="reversing()">
+    <input type="button" value="Even" onclick="Even()">
+    <input type="button" value="Odd" onclick="Odd()">
+    <p id="demo"></p>
+    <p id="demo1"></p>
+
+    <script>
+        function count() {
+            let arr = [];
+            let val = document.getElementById('input_field').value;
+            for (let i = 1; i <= val; i++) {
+                arr.push(i);
+                console.log(arr);
+                document.getElementById("demo").innerHTML = arr;
+
+            }
+
+        }
+
+        function reversing() {
+            let arr = [];
+            let val = document.getElementById('input_field').value;
+            for (let i = 1; i <= val; i++) {
+                arr.push(i);
+                let a = arr.sort(function (a, b) { return b - a });
+                document.getElementById("demo1").innerHTML = a;
+
+            }
+        }
+
+        function Even() {
+            let arr = [];
+            let val = document.getElementById('input_field').value;
+            for (let i = 2; i <= val; i++) {
+                if (i%2 == 0) {
+                    arr.push(i);
+                    document.getElementById("demo1").innerHTML = arr;
+                }
+
+            }
+
+        }
+        function Odd() {
+            let arr = [];
+            let val = document.getElementById('input_field').value;
+            for (let i = 1; i <= val; i++) {
+                if (i%2 == 1) {
+                    arr.push(i);
+                    document.getElementById("demo1").innerHTML = arr;
+                }
+
+            }
+        }
+
+
+    </script>
+</body>
+
+</html>
