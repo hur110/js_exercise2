@@ -1,0 +1,30 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task8</title>
+</head>
+
+<body>
+    <input type="text" name="" id="text_field">
+    <input type="button" value="Search" onclick="check()">
+    <p id="demo"></p>
+
+
+    <script>
+        let arr = ["cake", "apple pie", "cookie", "chips", "patties"];
+        function check() {
+            let val = document.getElementById('text_field').value;
+            if (arr.includes(val)) {
+                document.getElementById("demo").innerHTML = `${val} is availabe at index ${arr.indexOf(val)} in our bakery`;
+            }
+            else{
+                document.getElementById("demo").innerHTML = `We are Sorry. ${val} is not availabe in our bakery`; 
+            }
+        }
+    </script>
+</body>
+
+</html>
